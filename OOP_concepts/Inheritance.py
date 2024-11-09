@@ -29,4 +29,6 @@ s1 = Species('Dog', 'Black', 'Mammal')
 # s1.showMammal()
 
 d1 = Dog('Dog', "Black", 'Mammal', 'Inez')
+d1.showAnimal()
+d1.showMammal()
 d1.showDog()
