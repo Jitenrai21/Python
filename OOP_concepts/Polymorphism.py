@@ -1,4 +1,4 @@
-#method overriding
+# # method overriding
 # class nepal:
 #     def country(self):
 #         print('This is Nepal.')
@@ -24,19 +24,21 @@
 #     obj.cond()
 
 
+
 #polymorphism by function
-class dog:
-    def sound(self):
-        return 'Dog is barking.'
+# class dog:
+#     def sound(self):
+#         return 'Dog is barking.'
 
-class cat:
-    def sound(self):
-        return 'Cat is meowing.'
+# class cat:
+#     def sound(self):
+#         return 'Cat is meowing.'
 
-def makeSound(animal):
-    return animal.sound()
+# def makeSound(animal):
+#     return animal.sound()
 
-animals = [dog(), cat()]
+# animals = [dog(), cat()]
 
-for animal in animals:
-    print(makeSound(animal))
+# for animal in animals:
+#     print(makeSound(animal))
+
