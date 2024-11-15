@@ -52,3 +52,23 @@ def NGrestesNumbers(lst, n):
         rev.append(max)
     print(rev)
 NGrestesNumbers(lst, 2)
+
+#cloning list by slicing
+cloneList = lst[:]
+
+#by extend function
+# cloneList = []
+# cloneList.extend(lst)
+print(f"This is the clone of original list: {cloneList}.")
+
+#counting elements
+demo = [1,2,3,4,1,2,3,1,2,3,4,5,6,5,6,6]
+print(demo.count(6))
+
+def count(lst):
+    count = 0
+    for val in lst:
+        if val ==6:
+            count += 1
+    return count
+print(count(demo))
