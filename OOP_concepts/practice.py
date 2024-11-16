@@ -101,19 +101,68 @@
 # e1.showAccess()
 
 # #abstraction
-from abc import ABC, abstractmethod
-class Animal(ABC):
-    def __init__(self, species, color, breed):
+# from abc import ABC, abstractmethod
+# class Animal(ABC):
+#     def __init__(self, species, color, breed):
+#         self.species = species
+#         self.color = color
+#         self.breed = breed
+#     @abstractmethod
+#     def showDetails(self):
+#         pass
+
+# class Dog(Animal):
+#     def showDetails(self):
+#         print(f'Species:{self.species}\nColor:{self.color}\nBreed:{self.breed}')
+
+# d1 = Dog('Dog','Black', 'German')
+# d1.showDetails()
+
+# Encapsulation
+class rectangle:
+    def __init__(self, length, breadth):
+        self.length = length
+        self.breadth = breadth
+    def area(self):
+        area = self.length * self.breadth
+        print(f"Area:{area}")
+    def perimeter(self):
+        peri = 2 * (self.length + self.breadth)
+        print(f"Perimeter:{peri}")
+r1 = rectangle(5,5)
+r1.area()
+r1.perimeter()
+
+# Inheritance
+class animal:
+    def __init__(self, species):
         self.species = species
-        self.color = color
-        self.breed = breed
-    @abstractmethod
     def showDetails(self):
-        pass
+        print(f"I am an specific {self.species}.")
+class human(animal):
+    def __init__(self, species, name):
+        super().__init__(species)
+        self.name = name
+    def showHuman(self):
+        print(f"I am specific {self.species} and called as {self.name}.")
+h1 = human('Homo Sapiens','Human')
+h1.showHuman()
 
-class Dog(Animal):
-    def showDetails(self):
-        print(f'Species:{self.species}\nColor:{self.color}\nBreed:{self.breed}')
+#Protected and private
+class person:
+    def __init__(self, name, age):
+        self._name = name
+        self.__age = age
+    def showdetails(self):
+        print(f"Access to both {self._name} and {self.__age}.")
+class person2(person):
+    def __init__(self, name, age):
+        super().__init__(name, age)
+    def showName(self):
+        print(f"Only access to Name:{self._name}")
+p1 = person("Inez", '22')
+p1.showdetails()
+p2 = person2('Inez', '22')
+p2.showName()
 
-d1 = Dog('Dog','Black', 'German')
-d1.showDetails()
+
