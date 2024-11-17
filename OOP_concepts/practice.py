@@ -165,4 +165,50 @@ p1.showdetails()
 p2 = person2('Inez', '22')
 p2.showName()
 
+#Polymorphism
+class Nepal:
+    def country(self):
+        print(f"This is Nepal.")
+    def lang(self):
+        print("The native langauge is Nepali.")
+class USA:
+    def country(self):
+        print("This is USA.")
+    def lang(self):
+        print("English is the native language.")
+n1 = Nepal()
+u1 = USA()
+for obj in (n1, u1):
+    obj.country()
+    obj.lang()
+
+class dog:
+    def sound(self):
+        return 'bark'
+class cat:
+    def sound(self):
+        return 'meow'
+def makeSound(animal):
+    return animal.sound()
+animals = [dog(), cat()]
+for animal in animals:
+    print(makeSound(animal))
+
+#abstraction
+from abc import ABC, abstractmethod
+class vehicle(ABC):
+    def __init__(self, name, model, color):
+        self.name = name
+        self.model = model
+        self.color = color
+    @abstractmethod
+    def showDetails(self):
+        pass
+class car(vehicle):
+    def __init__(self, name, model, color):
+        super().__init__(name, model, color)
+    def showDetails(self):
+        print(f"This is a {self.color} {self.name} from {self.model} year.")
+c1 = car('Asta', '2022', 'silver')
+c1.showDetails()
 
