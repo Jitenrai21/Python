@@ -42,3 +42,32 @@
 # for animal in animals:
 #     print(makeSound(animal))
 
+class USA:
+    def name(self):
+        print('This is USA.')
+    def lang(self):
+        print('The native tongue is English.')
+class Nepal:
+    def name(self):
+        print('This is Nepal.')
+    def lang(self):
+        print('The native tongue is Nepali.')
+
+objs = [USA(), Nepal()]  
+for obj in objs:
+    obj.name()
+    obj.lang() 
+
+class Dog:
+    def sound(self):
+        print('Bark!!')
+class Cat:
+    def sound(self):
+        print('Meow!!')
+def makeSound(animal):
+    animal.sound()
+
+animals = [Dog(), Cat()]
+
+for animal in animals:
+    makeSound(animal)
