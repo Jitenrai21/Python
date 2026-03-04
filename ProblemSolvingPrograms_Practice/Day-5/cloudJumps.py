@@ -13,10 +13,9 @@ def jumpingOnClouds(c, k):
     i = 0
     while True:
         i = (i + k) % n
+        e -= 1
         if c[i] == 1:
             e -= 2
-        else:
-            e -= 1
         if i == 0:
             break
     return e
